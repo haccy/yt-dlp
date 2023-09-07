@@ -1,11 +1,10 @@
 
 import io
-from typing import Union
 from xml.etree import ElementTree
 from .danmaku2ass import Danmaku2ASS
 
 
-def convert_niconico_to_ass(packets: list[dict[str, dict[str, Union[int, str]]]],
+def convert_niconico_to_ass(packets: list[dict[str, dict[str, str | int]]],
                             width: int,
                             height: int) -> str:
 
