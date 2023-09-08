@@ -247,7 +247,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with: # 3.8 is used for Win7 support
-          python-version: "3.11"
+          python-version: "3.11.3"
       - name: Install Requirements
         run: | # Custom pyinstaller built with https://github.com/yt-dlp/pyinstaller-builds
           python -m pip install -U pip setuptools wheel py2exe
