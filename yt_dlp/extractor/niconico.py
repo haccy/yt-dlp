@@ -501,7 +501,7 @@ class NiconicoIE(InfoExtractor):
             },
                 {
                 'ext': 'ass',
-                'data': convert_niconico_to_ass(legacy_danmaku + new_danmaku, for_ass['width'], for_ass['height']),
+                'data': convert_niconico_to_ass(legacy_danmaku + new_danmaku, for_ass['width'], for_ass['height'], self.write_debug),
             }],
         }
 
