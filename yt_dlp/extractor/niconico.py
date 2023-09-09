@@ -499,9 +499,13 @@ class NiconicoIE(InfoExtractor):
                 'ext': 'json',
                 'data': json.dumps(legacy_danmaku + new_danmaku),
             }],
-            'mul': [{ # Multiple languages
+            'mul': [{  # Multiple languages(ISO 639-2)
+                'name': 'comments',
                 'ext': 'ass',
-                'data': convert_niconico_to_ass(legacy_danmaku + new_danmaku, for_ass['width'], for_ass['height'], self.write_debug),
+                'data': convert_niconico_to_ass(legacy_danmaku + new_danmaku,
+                                                for_ass['width'],
+                                                for_ass['height'],
+                                                self.write_debug),
             }],
         }
 
