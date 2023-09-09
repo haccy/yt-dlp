@@ -498,8 +498,8 @@ class NiconicoIE(InfoExtractor):
             'comments': [{
                 'ext': 'json',
                 'data': json.dumps(legacy_danmaku + new_danmaku),
-            },
-                {
+            }],
+            'mul': [{ # Multiple languages
                 'ext': 'ass',
                 'data': convert_niconico_to_ass(legacy_danmaku + new_danmaku, for_ass['width'], for_ass['height'], self.write_debug),
             }],
