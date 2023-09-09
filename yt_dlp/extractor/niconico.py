@@ -495,18 +495,20 @@ class NiconicoIE(InfoExtractor):
             return
 
         return {
-            'comments': [{
-                'ext': 'json',
-                'data': json.dumps(legacy_danmaku + new_danmaku),
-            }],
-            'mul': [{  # Multiple languages(ISO 639-2)
-                'name': 'comments',
-                'ext': 'ass',
-                'data': convert_niconico_to_ass(legacy_danmaku + new_danmaku,
-                                                for_ass['width'],
-                                                for_ass['height'],
-                                                self.write_debug),
-            }],
+            'mul': [  # Multiple languages(ISO 639-2)
+                {
+                    'ext': 'json',
+                    'data': json.dumps(legacy_danmaku + new_danmaku),
+                },
+                {
+                    'name': 'comments',
+                    'ext': 'ass',
+                    'data': convert_niconico_to_ass(legacy_danmaku + new_danmaku,
+                                                    for_ass['width'],
+                                                    for_ass['height'],
+                                                    self.write_debug),
+                }
+            ],
         }
 
     def _extract_legacy_comments(self, video_id, threads, user_id, user_key):
