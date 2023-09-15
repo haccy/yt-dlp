@@ -136,7 +136,7 @@ def ReadCommentsNiconico(f, fontsize):
             pos = 0
             color = 0xffffff
             size = fontsize
-            for mailstyle in str(comment.getAttribute('mail')).split():
+            for mailstyle in re.split(r'\W+', str(comment.getAttribute('mail'))):
                 if mailstyle == 'ue':
                     pos = 1
                 elif mailstyle == 'shita':
