@@ -33,6 +33,7 @@ from ..utils import (
     urlencode_postdata,
     urljoin,
 )
+from ..danmaku2ass_facade import convert_niconico_to_ass
 
 
 class NiconicoIE(InfoExtractor):
@@ -415,6 +416,7 @@ class NiconicoIE(InfoExtractor):
                 raise ExtractorError(re.sub(r'\s+', ' ', error_msg), expected=True)
 
         formats = []
+        for_ass = {}
 
         def get_video_info(*items, get_first=True, **kwargs):
             return traverse_obj(api_data, ('video', *items), get_all=not get_first, **kwargs)
@@ -425,6 +427,8 @@ class NiconicoIE(InfoExtractor):
             fmt = self._extract_format_for_quality(video_id, audio_quality, video_quality, protocol)
             if fmt:
                 formats.append(fmt)
+                if fmt['width'] and fmt['height']:
+                    for_ass = fmt
 
         # Start extracting information
         tags = None
@@ -470,10 +474,10 @@ class NiconicoIE(InfoExtractor):
                 parse_duration(self._html_search_meta('video:duration', webpage, 'video duration', default=None))
                 or get_video_info('duration')),
             'webpage_url': url_or_none(url) or f'https://www.nicovideo.jp/watch/{video_id}',
-            'subtitles': self.extract_subtitles(video_id, api_data, session_api_data),
+            'subtitles': self.extract_subtitles(video_id, api_data, session_api_data, for_ass),
         }
 
-    def _get_subtitles(self, video_id, api_data, session_api_data):
+    def _get_subtitles(self, video_id, api_data, session_api_data, for_ass):
         comment_user_key = traverse_obj(api_data, ('comment', 'keys', 'userKey'))
         user_id_str = session_api_data.get('serviceUserId')
 
@@ -493,6 +497,14 @@ class NiconicoIE(InfoExtractor):
             'comments': [{
                 'ext': 'json',
                 'data': json.dumps(legacy_danmaku + new_danmaku),
+            }],
+            'mul': [{  # Multiple languages(ISO 639-2)
+                'name': 'comments',
+                'ext': 'ass',
+                'data': convert_niconico_to_ass(legacy_danmaku + new_danmaku,
+                                                for_ass['width'],
+                                                for_ass['height'],
+                                                self._downloader),
             }],
         }
 
