@@ -35,6 +35,7 @@ from ..utils.traversal import (
     require,
     traverse_obj,
 )
+from ..danmaku2ass_facade import convert_niconico_to_ass
 
 
 class NiconicoBaseIE(InfoExtractor):
@@ -433,6 +434,14 @@ class NiconicoIE(NiconicoBaseIE):
             'comments': [{
                 'ext': 'json',
                 'data': json.dumps(danmaku),
+            }],
+            'mul': [{  # Multiple languages(ISO 639-2)
+                'name': 'comments',
+                'ext': 'ass',
+                'data': convert_niconico_to_ass(danmaku,
+                                                854,
+                                                480,
+                                                self._downloader),
             }],
         }
 
