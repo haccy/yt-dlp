@@ -1,0 +1,29 @@
+name: Rebase on Upstream
+
+on:
+  workflow_dispatch:    # run manually
+  schedule:
+    - cron: '13 10 * * *'
+
+# ワークフロー全体のデフォルト権限を閉じて、zizmorの「デフォルト権限使用」警告を防ぐ
+permissions: {}
+
+# 同時実行を防ぐためのconcurrency設定を追加
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  rebase:
+    name: Rebase Upstream Branch  # GitHub上ではジョブに名前がなくても動作しますが、UI上で匿名表示されてしまい分かりにくくなるため、zizmor が --pedantic（厳密な）チェックとして警告
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
+      with:
+        ref: work
+        fetch-depth: 0
+        persist-credentials: true  # プッシュできるように認証情報の保存を有効にする
+    - uses: imba-tjd/rebase-upstream-action@559f4270ba3c290f6009fc7114398a4ea07fa799  # 0.12
+      with:
+        branch: master
+        depth: 0
