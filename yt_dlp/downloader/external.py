@@ -168,6 +168,10 @@ class ExternalFD(FragmentFD):
         if not skip_unavailable_fragments and retry_manager.error:
             return -1
 
+        PNG_SIGNATURE_BYTES = bytes.fromhex('89504E470D0A1A0A0000000D49484452')
+        PNG_SIGNATURE_LENGTH = len(PNG_SIGNATURE_BYTES)
+        ZERO_PADDING_BYTES = b'\x00' * PNG_SIGNATURE_LENGTH
+
         decrypt_fragment = self.decrypter(info_dict)
         dest, _ = self.sanitize_open(tmpfilename, 'wb')
         for frag_index, fragment in enumerate(info_dict['fragments']):
@@ -180,8 +184,17 @@ class ExternalFD(FragmentFD):
                     continue
                 self.report_error(f'Unable to open fragment {frag_index}; {err}')
                 return -1
-            dest.write(decrypt_fragment(fragment, src.read()))
+            read_data: bytes = decrypt_fragment(fragment, src.read())
             src.close()
+            if read_data.startswith(PNG_SIGNATURE_BYTES):
+                # シグネチャ長だけゼロにし、残りは元データのまま
+                dest.write(ZERO_PADDING_BYTES)
+                dest.write(read_data[PNG_SIGNATURE_LENGTH:])
+                self.ydl.write_debug(f'[Replaced] {fragment_filename}')
+            else:
+                # PNG以外はそのままコピー
+                dest.write(read_data)
+                self.ydl.write_debug(f'[Skipped ] {fragment_filename} (signature mismatch)')
             if not self.params.get('keep_fragments', False):
                 self.try_remove(fragment_filename)
         dest.close()
