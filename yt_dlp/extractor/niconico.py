@@ -30,6 +30,7 @@ from ..utils import (
     urlencode_postdata,
     urljoin,
 )
+from ..danmaku2ass_facade import convert_niconico_to_ass
 
 
 class NiconicoIE(InfoExtractor):
@@ -449,7 +450,7 @@ class NiconicoIE(InfoExtractor):
 
         try:
             webpage, handle = self._download_webpage_handle(
-                'https://www.nicovideo.jp/watch/' + video_id, video_id)
+                'https://www.nicovideo.jp/watch/' + video_id, video_id, headers={'Accept-Language': "ja,en-US;q=0.7,en;q=0.3",})
             if video_id.startswith('so'):
                 video_id = self._match_id(handle.url)
 
@@ -573,6 +574,14 @@ class NiconicoIE(InfoExtractor):
             'comments': [{
                 'ext': 'json',
                 'data': json.dumps(danmaku),
+            }],
+            'mul': [{  # Multiple languages(ISO 639-2)
+                'name': 'comments',
+                'ext': 'ass',
+                'data': convert_niconico_to_ass(danmaku,
+                                                854,
+                                                480,
+                                                self._downloader),
             }],
         }
 
