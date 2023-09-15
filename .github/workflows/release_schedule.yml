@@ -1,0 +1,13 @@
+name: Schedule Release
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '13 11 * * *'
+
+jobs:
+  build:
+    uses: ./.github/workflows/release.yml
+    with:
+      version: ''
+      channel: ''
+      prerelease: false
