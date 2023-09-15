@@ -1,0 +1,19 @@
+name: Rebase on Upstream
+
+on:
+  workflow_dispatch:    # run manually
+  schedule:
+    - cron: '13 10 * * *'
+
+jobs:
+  rebase:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+      with:
+        ref: work
+        fetch-depth: 0
+    - uses: imba-tjd/rebase-upstream-action@master
+      with:
+        branch: master
+        depth: 0
