@@ -86,7 +86,7 @@ jobs:
 
       - uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548  # v6.1.0
         with:
-          python-version: "3.10"  # Keep this in sync with test-workflows.yml
+          python-version: "3.x"
 
       - name: Process inputs
         id: process_inputs
@@ -129,7 +129,7 @@ jobs:
         env:
           VERSION: ${{ steps.setup_variables.outputs.version }}
           GITHUB_EVENT_SENDER_LOGIN: ${{ github.event.sender.login }}
-          GITHUB_EVENT_REF: ${{ github.event.ref }}
+          GITHUB_EVENT_REF: ${{ github.event.ref || github.ref }}
         if: |
           !inputs.prerelease && steps.setup_variables.outputs.target_repo == github.repository
         run: |
@@ -147,7 +147,7 @@ jobs:
 
       - name: Update master
         env:
-          GITHUB_EVENT_REF: ${{ github.event.ref }}
+          GITHUB_EVENT_REF: ${{ github.event.ref || github.ref  }}
         if: |
           vars.PUSH_VERSION_COMMIT && !inputs.prerelease && steps.setup_variables.outputs.target_repo == github.repository
         run: git push origin "${GITHUB_EVENT_REF}"
@@ -182,7 +182,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548  # v6.1.0
         with:
-          python-version: "3.10"
+          python-version: "3.x"
 
       - name: Install Requirements
         run: |
