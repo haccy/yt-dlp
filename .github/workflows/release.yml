@@ -16,6 +16,8 @@ on:
         description: Pre-release
         default: false
         type: boolean
+  schedule:
+    - cron: '13 11 * * *'
 
 permissions:
   contents: read
