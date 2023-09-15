@@ -30,6 +30,7 @@ from ..utils import (
     urlencode_postdata,
     urljoin,
 )
+from ..danmaku2ass_facade import convert_niconico_to_ass
 
 
 class NiconicoIE(InfoExtractor):
@@ -576,6 +577,14 @@ class NiconicoIE(InfoExtractor):
             'comments': [{
                 'ext': 'json',
                 'data': json.dumps(danmaku),
+            }],
+            'mul': [{  # Multiple languages(ISO 639-2)
+                'name': 'comments',
+                'ext': 'ass',
+                'data': convert_niconico_to_ass(danmaku,
+                                                854,
+                                                480,
+                                                self._downloader),
             }],
         }
 
