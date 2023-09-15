@@ -175,66 +175,6 @@ jobs:
             yt-dlp_linux.zip
           compression-level: 0
 
-  linux_arm:
-    needs: process
-    if: inputs.linux_arm
-    permissions:
-      contents: read
-      packages: write # for creating cache
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        architecture:
-          - armv7
-          - aarch64
-
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          path: ./repo
-      - name: Virtualized Install, Prepare & Build
-        uses: yt-dlp/run-on-arch-action@v2
-        with:
-          # Ref: https://github.com/uraimo/run-on-arch-action/issues/55
-          env: |
-            GITHUB_WORKFLOW: build
-          githubToken: ${{ github.token }} # To cache image
-          arch: ${{ matrix.architecture }}
-          distro: ubuntu18.04 # Standalone executable should be built on minimum supported OS
-          dockerRunArgs: --volume "${PWD}/repo:/repo"
-          install: | # Installing Python 3.10 from the Deadsnakes repo raises errors
-            apt update
-            apt -y install zlib1g-dev libffi-dev python3.8 python3.8-dev python3.8-distutils python3-pip
-            python3.8 -m pip install -U pip setuptools wheel
-            # Cannot access any files from the repo directory at this stage
-            python3.8 -m pip install -U Pyinstaller mutagen pycryptodomex websockets brotli certifi secretstorage cffi
-
-          run: |
-            cd repo
-            python3.8 devscripts/install_deps.py -o --include build
-            python3.8 devscripts/install_deps.py --include pyinstaller --include secretstorage  # Cached version may be out of date
-            python3.8 devscripts/update-version.py -c "${{ inputs.channel }}" -r "${{ needs.process.outputs.origin }}" "${{ inputs.version }}"
-            python3.8 devscripts/make_lazy_extractors.py
-            python3.8 -m bundle.pyinstaller
-
-            if ${{ vars.UPDATE_TO_VERIFICATION && 'true' || 'false' }}; then
-              arch="${{ (matrix.architecture == 'armv7' && 'armv7l') || matrix.architecture }}"
-              chmod +x ./dist/yt-dlp_linux_${arch}
-              cp ./dist/yt-dlp_linux_${arch} ./dist/yt-dlp_linux_${arch}_downgraded
-              version="$(./dist/yt-dlp_linux_${arch} --version)"
-              ./dist/yt-dlp_linux_${arch}_downgraded -v --update-to yt-dlp/yt-dlp@2023.03.04
-              downgraded_version="$(./dist/yt-dlp_linux_${arch}_downgraded --version)"
-              [[ "$version" != "$downgraded_version" ]]
-            fi
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-bin-linux_${{ matrix.architecture }}
-          path: | # run-on-arch-action designates armv7l as armv7
-            repo/dist/yt-dlp_linux_${{ (matrix.architecture == 'armv7' && 'armv7l') || matrix.architecture }}
-          compression-level: 0
-
   macos:
     needs: process
     if: inputs.macos
@@ -341,21 +281,43 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: # 3.8 is used for Win7 support
-          python-version: "3.8"
+          python-version: "3.x"
+          check-latest: true
       - name: Install Requirements
         run: | # Custom pyinstaller built with https://github.com/yt-dlp/pyinstaller-builds
           python devscripts/install_deps.py -o --include build
           python devscripts/install_deps.py --include py2exe
-          python -m pip install -U "https://yt-dlp.github.io/Pyinstaller-Builds/x86_64/pyinstaller-5.8.0-py3-none-any.whl"
+          python -m pip install -U "https://github.com/webcomics/pyinstaller-builder/releases/download/snapshot/pyinstaller-6.4.0-py3-none-any.whl"
 
       - name: Prepare
         run: |
           python devscripts/update-version.py -c "${{ inputs.channel }}" -r "${{ needs.process.outputs.origin }}" "${{ inputs.version }}"
           python devscripts/make_lazy_extractors.py
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11" #  py2exe 0.13.0.0 requires Python <= 3.11
+          check-latest: true
+      - name: Install Requirements
+        run: | 
+          python devscripts/install_deps.py -o --include build
+          python devscripts/install_deps.py --include py2exe
       - name: Build
         run: |
           python -m bundle.py2exe
           Move-Item ./dist/yt-dlp.exe ./dist/yt-dlp_min.exe
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+          check-latest: true
+      - name: Install Requirements
+        run: | # Custom pyinstaller built with https://github.com/yt-dlp/pyinstaller-builds
+          python devscripts/install_deps.py -o --include build
+          python devscripts/install_deps.py --include py2exe
+          python -m pip install -U "https://github.com/webcomics/pyinstaller-builder/releases/download/snapshot/pyinstaller-6.4.0-py3-none-any.whl"
+      - name: Build
+        run: |
           python -m bundle.pyinstaller
           python -m bundle.pyinstaller --onedir
           Compress-Archive -Path ./dist/yt-dlp/* -DestinationPath ./dist/yt-dlp_win.zip
@@ -383,62 +345,14 @@ jobs:
             dist/yt-dlp_win.zip
           compression-level: 0
 
-  windows32:
-    needs: process
-    if: inputs.windows32
-    runs-on: windows-latest
-
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: "3.8"
-          architecture: "x86"
-      - name: Install Requirements
-        run: |
-          python devscripts/install_deps.py -o --include build
-          python devscripts/install_deps.py
-          python -m pip install -U "https://yt-dlp.github.io/Pyinstaller-Builds/i686/pyinstaller-5.8.0-py3-none-any.whl"
-
-      - name: Prepare
-        run: |
-          python devscripts/update-version.py -c "${{ inputs.channel }}" -r "${{ needs.process.outputs.origin }}" "${{ inputs.version }}"
-          python devscripts/make_lazy_extractors.py
-      - name: Build
-        run: |
-          python -m bundle.pyinstaller
-
-      - name: Verify --update-to
-        if: vars.UPDATE_TO_VERIFICATION
-        run: |
-          foreach ($name in @("yt-dlp_x86")) {
-            Copy-Item "./dist/${name}.exe" "./dist/${name}_downgraded.exe"
-            $version = & "./dist/${name}.exe" --version
-            & "./dist/${name}_downgraded.exe" -v --update-to yt-dlp/yt-dlp@2023.03.04
-            $downgraded_version = & "./dist/${name}_downgraded.exe" --version
-            if ($version -eq $downgraded_version) {
-              exit 1
-            }
-          }
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-bin-${{ github.job }}
-          path: |
-            dist/yt-dlp_x86.exe
-          compression-level: 0
-
   meta_files:
     if: inputs.meta_files && always() && !cancelled()
     needs:
       - process
       - unix
-      - linux_arm
       - macos
       - macos_legacy
       - windows
-      - windows32
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v4
