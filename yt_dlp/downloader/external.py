@@ -168,10 +168,27 @@ class ExternalFD(FragmentFD):
         if not skip_unavailable_fragments and retry_manager.error:
             return -1
 
+        SIGNATURE   = bytes.fromhex('89504E470D0A1A0A0000000D49484452')
+        REPLACEMENT = b'\x00' * len(SIGNATURE)
+        from pathlib import Path
+        def process_file(path: Path):
+            try:
+                with path.open('r+b') as f:
+                    header = f.read(len(SIGNATURE))
+                    if header == SIGNATURE:
+                        f.seek(0)
+                        f.write(REPLACEMENT)
+                        print(f'[Replaced] {path.name}')
+                    else:
+                        print(f'[Skipped ] {path.name} (signature mismatch)')
+            except Exception as e:
+                print(f'[Error   ] {path.name}: {e}')
+
         decrypt_fragment = self.decrypter(info_dict)
         dest, _ = self.sanitize_open(tmpfilename, 'wb')
         for frag_index, fragment in enumerate(info_dict['fragments']):
             fragment_filename = f'{tmpfilename}-Frag{frag_index}'
+            process_file(Path(fragment_filename))
             try:
                 src, _ = self.sanitize_open(fragment_filename, 'rb')
             except OSError as err:
