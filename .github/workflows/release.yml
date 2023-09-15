@@ -16,6 +16,22 @@ on:
         description: Pre-release
         default: false
         type: boolean
+  workflow_call:
+    inputs:
+      version:
+        description: Version tag (YYYY.MM.DD[.REV])
+        required: false
+        default: ''
+        type: string
+      channel:
+        description: Update channel (stable/nightly/...)
+        required: false
+        default: ''
+        type: string
+      prerelease:
+        description: Pre-release
+        default: false
+        type: boolean
 
 permissions:
   contents: read
