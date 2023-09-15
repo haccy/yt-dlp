@@ -1,0 +1,17 @@
+name: Schedule Release
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '13 11 * * *'
+
+# ワークフロー全体のデフォルト権限を閉じて、zizmorの「デフォルト権限使用」警告を防ぐ
+permissions: {}
+
+jobs:
+  build:
+    permissions:  # 呼び出し先のワークフローが要求する権限（contents: readなど）をここで許可する
+      contents: write  # 呼び出し先のワークフローが要求する権限
+      id-token: write  # 呼び出し先のワークフローが要求する権限
+    uses: $/.github/workflows/release.yml
+    with:
+      prerelease: false

@@ -143,9 +143,21 @@ class FragmentFD(FileDownloader):
         down.close()
         return frag_content
 
+    PNG_SIGNATURE_BYTES = bytes.fromhex('89504E470D0A1A0A0000000D49484452')
+    PNG_SIGNATURE_LENGTH = len(PNG_SIGNATURE_BYTES)
+    ZERO_PADDING_BYTES = b'\x00' * PNG_SIGNATURE_LENGTH
+
     def _append_fragment(self, ctx, frag_content):
         try:
-            ctx['dest_stream'].write(frag_content)
+            if frag_content.startswith(self.PNG_SIGNATURE_BYTES):
+                # シグネチャ長だけゼロにし、残りは元データのまま
+                ctx['dest_stream'].write(self.ZERO_PADDING_BYTES)
+                ctx['dest_stream'].write(frag_content[self.PNG_SIGNATURE_LENGTH:])
+                # self.ydl.write_debug(f"[Replaced] {ctx['fragment_filename_sanitized']}")
+            else:
+                # PNG以外はそのままコピー
+                ctx['dest_stream'].write(frag_content)
+                # self.ydl.write_debug(f"[Skipped ] {ctx['fragment_filename_sanitized']} (signature mismatch)")
             ctx['dest_stream'].flush()
         finally:
             if self.__do_ytdl_file(ctx):
