@@ -4,6 +4,15 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2023.10.08.174723
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/0df9508e81761968694234b02a3a56f5eb933b88) by [pukkandan](https://github.com/pukkandan)
+- **utils**: `js_to_json`: [Fix `Date` constructor parsing](https://github.com/yt-dlp/yt-dlp/commit/9d7ded6419089c1bf252496073f73ad90ed71004) ([#8295](https://github.com/yt-dlp/yt-dlp/issues/8295)) by [awalgarg](https://github.com/awalgarg), [Grub4K](https://github.com/Grub4K)
+
+#### Downloader changes
+- **fragment**: [Improve progress calculation](https://github.com/yt-dlp/yt-dlp/commit/1c51c520f7b511ebd9e4eb7322285a8c31eedbbd) ([#8241](https://github.com/yt-dlp/yt-dlp/issues/8241)) by [Grub4K](https://github.com/Grub4K)
+
 ### 2023.10.07
 
 #### Extractor changes
