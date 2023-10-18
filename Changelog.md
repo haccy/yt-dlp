@@ -4,6 +4,17 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2023.10.18.111809
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/4b9456b656394f0d1e109313d5e7c47fcf0e59c6) by [pukkandan](https://github.com/pukkandan)
+
+#### Networking changes
+- **Request Handler**: requests: [Add handler for `requests` HTTP library](https://github.com/yt-dlp/yt-dlp/commit/8a8b54523addf46dfd50ef599761a81bc22362e6) ([#3668](https://github.com/yt-dlp/yt-dlp/issues/3668)) by [bashonly](https://github.com/bashonly), [coletdjnz](https://github.com/coletdjnz), [Grub4K](https://github.com/Grub4K) (With fixes in [4e38e2a](https://github.com/yt-dlp/yt-dlp/commit/4e38e2ae9d7380015349e6aee59c78bb3938befd))
+
+#### Misc. changes
+- **ci**: [Run core tests with dependencies](https://github.com/yt-dlp/yt-dlp/commit/700444c23ddb65f618c2abd942acdc0c58c650b1) by [bashonly](https://github.com/bashonly), [coletdjnz](https://github.com/coletdjnz)
+
 ### 2023.10.13
 
 #### Core changes
