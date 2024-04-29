@@ -4,6 +4,27 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2024.04.29.135517
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/9d2e424c9f33d0aa5dc6ee89024994b3f6746fa4) by [pukkandan](https://github.com/pukkandan)
+- **windows**: [Improve shell quoting and tests](https://github.com/yt-dlp/yt-dlp/commit/64766459e37451b665c1464073c28361fbcf1c25) ([#9802](https://github.com/yt-dlp/yt-dlp/issues/9802)) by [Grub4K](https://github.com/Grub4K) (With fixes in [7e26bd5](https://github.com/yt-dlp/yt-dlp/commit/7e26bd53f9c5893518fde81dfd0079ec08dd841e))
+
+#### Extractor changes
+- [Make `_search_nextjs_data` non fatal](https://github.com/yt-dlp/yt-dlp/commit/3ee1194288981c4f2c4abd8315326de0c424d2ce) ([#8937](https://github.com/yt-dlp/yt-dlp/issues/8937)) by [Grub4K](https://github.com/Grub4K)
+- **afreecatv**: live: [Add `cdn` extractor-arg](https://github.com/yt-dlp/yt-dlp/commit/315b3544296bb83012e20ee3af9d3cbf5600dd1c) ([#9666](https://github.com/yt-dlp/yt-dlp/issues/9666)) by [bashonly](https://github.com/bashonly)
+- **crunchyroll**: [Fix auth and remove cookies support](https://github.com/yt-dlp/yt-dlp/commit/ff38a011d57b763f3a69bebd25a5dc9044a717ce) ([#9749](https://github.com/yt-dlp/yt-dlp/issues/9749)) by [bashonly](https://github.com/bashonly)
+- **facebook**: [Fix DASH formats extraction](https://github.com/yt-dlp/yt-dlp/commit/e3b42d8b1b8bcfff7ba146c19fc3f6f6ba843cea) ([#9734](https://github.com/yt-dlp/yt-dlp/issues/9734)) by [bashonly](https://github.com/bashonly)
+- **jiosaavn**: [Extract via API and fix playlists](https://github.com/yt-dlp/yt-dlp/commit/0c21c53885cf03f4040467ae8c44d7ff51016116) ([#9656](https://github.com/yt-dlp/yt-dlp/issues/9656)) by [bashonly](https://github.com/bashonly)
+- **patreon**: [Fix Vimeo embed extraction](https://github.com/yt-dlp/yt-dlp/commit/c9ce57d9bf51541da2381d99bc096a9d0ddf1f27) ([#9712](https://github.com/yt-dlp/yt-dlp/issues/9712)) by [bashonly](https://github.com/bashonly)
+- **theatercomplextown**: [Fix extractors](https://github.com/yt-dlp/yt-dlp/commit/8056a3026ed6ec6a6d0ed56fdd7ebcd16e928341) ([#9754](https://github.com/yt-dlp/yt-dlp/issues/9754)) by [bashonly](https://github.com/bashonly)
+
+#### Misc. changes
+- **build**
+    - [Migrate `linux_exe` to static musl builds](https://github.com/yt-dlp/yt-dlp/commit/ac817bc83efd939dca3e40c4b527d0ccfc77172b) ([#9811](https://github.com/yt-dlp/yt-dlp/issues/9811)) by [bashonly](https://github.com/bashonly), [Grub4K](https://github.com/Grub4K)
+    - [Normalize `curl_cffi` group to `curl-cffi`](https://github.com/yt-dlp/yt-dlp/commit/02483bea1c4dbe1bace8ca4d19700104fbb8a00f) ([#9698](https://github.com/yt-dlp/yt-dlp/issues/9698)) by [bashonly](https://github.com/bashonly) (With fixes in [89f535e](https://github.com/yt-dlp/yt-dlp/commit/89f535e2656964b4061c25a7739d4d6ba0a30568))
+    - [Run `macos_legacy` job on `macos-12`](https://github.com/yt-dlp/yt-dlp/commit/1a366403d9c26b992faa77e00f4d02ead57559e3) ([#9804](https://github.com/yt-dlp/yt-dlp/issues/9804)) by [bashonly](https://github.com/bashonly)
+
 ### 2024.04.09
 
 #### Important changes
