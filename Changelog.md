@@ -4,6 +4,16 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2024.05.27.133147
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/caaf3bdd822b3e693a80050ea86b87efda64eed6) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- [Fix parsing of base URL in SMIL manifest](https://github.com/yt-dlp/yt-dlp/commit/26603d0b34898818992bee4598e0607c07059511) ([#9225](https://github.com/yt-dlp/yt-dlp/issues/9225)) by [seproDev](https://github.com/seproDev)
+- **piksel**: [Update domain](https://github.com/yt-dlp/yt-dlp/commit/ae2194e1dd4a99d32eb3cab7c48a0ff03101ef3b) ([#9223](https://github.com/yt-dlp/yt-dlp/issues/9223)) by [seproDev](https://github.com/seproDev)
+- **tiktok**: user: [Fix extraction loop](https://github.com/yt-dlp/yt-dlp/commit/c53c2e40fde8f2e15c7c62f8ca1a5d9e90ddc079) ([#10035](https://github.com/yt-dlp/yt-dlp/issues/10035)) by [bashonly](https://github.com/bashonly)
+
 ### 2024.05.26
 
 #### Core changes
