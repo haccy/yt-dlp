@@ -4,6 +4,14 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2024.05.29.111932
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/2f6e7268cd0d44ce0526b357748fa7d025c369f0) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **tubitv**: [Fix extractor](https://github.com/yt-dlp/yt-dlp/commit/bef9a9e5361fd7a72e21d0f1a8c8afb70d89e8c5) ([#9975](https://github.com/yt-dlp/yt-dlp/issues/9975)) by [chilinux](https://github.com/chilinux)
+
 ### 2024.05.27
 
 #### Extractor changes
