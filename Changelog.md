@@ -4,6 +4,15 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2024.05.30.111907
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/944d36858d2552f149b35f16f7082df16335d23b) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **orf**: on: [Support segmented episodes](https://github.com/yt-dlp/yt-dlp/commit/8b46ad4d8b8ee8c5472af0cde863baa89ca3f425) ([#10053](https://github.com/yt-dlp/yt-dlp/issues/10053)) by [seproDev](https://github.com/seproDev)
+- **tubitv**: [Fix extractor](https://github.com/yt-dlp/yt-dlp/commit/bef9a9e5361fd7a72e21d0f1a8c8afb70d89e8c5) ([#9975](https://github.com/yt-dlp/yt-dlp/issues/9975)) by [chilinux](https://github.com/chilinux)
+
 ### 2024.05.27
 
 #### Extractor changes
