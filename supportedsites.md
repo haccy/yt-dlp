@@ -46,6 +46,7 @@
  - **aenetworks:show**
  - **AeonCo**
  - **afreecatv**: [*afreecatv*](## "netrc machine") afreecatv.com
+ - **afreecatv:catchstory**: [*afreecatv*](## "netrc machine") afreecatv.com catch story
  - **afreecatv:live**: [*afreecatv*](## "netrc machine") afreecatv.com livestreams
  - **afreecatv:user**
  - **AirTV**
@@ -678,6 +679,8 @@
  - **la7.it**
  - **la7.it:​pod:episode**
  - **la7.it:podcast**
+ - **laracasts**
+ - **laracasts:series**
  - **LastFM**
  - **LastFMPlaylist**
  - **LastFMUser**
@@ -1237,6 +1240,7 @@
  - **rtve.es:television**
  - **RTVS**
  - **rtvslo.si**
+ - **rtvslo.si:show**
  - **RudoVideo**
  - **Rule34Video**
  - **Rumble**
@@ -1360,6 +1364,7 @@
  - **SpreakerShowPage**
  - **SpringboardPlatform**
  - **Sprout**
+ - **SproutVideo**
  - **sr:mediathek**: Saarländischer Rundfunk (**Currently broken**)
  - **SRGSSR**
  - **SRGSSRPlay**: srf.ch, rts.ch, rsi.ch, rtr.ch and swissinfo.ch play sites
@@ -1494,8 +1499,8 @@
  - **Tube8**: (**Currently broken**)
  - **TubeTuGraz**: [*tubetugraz*](## "netrc machine") tube.tugraz.at
  - **TubeTuGrazSeries**: [*tubetugraz*](## "netrc machine")
- - **TubiTv**: [*tubitv*](## "netrc machine")
- - **TubiTvShow**
+ - **tubitv**: [*tubitv*](## "netrc machine")
+ - **tubitv:series**
  - **Tumblr**: [*tumblr*](## "netrc machine")
  - **TuneInPodcast**
  - **TuneInPodcastEpisode**
@@ -1607,6 +1612,7 @@
  - **VidioPremier**: [*vidio*](## "netrc machine")
  - **VidLii**
  - **Vidly**
+ - **vids.io**
  - **viewlift**
  - **viewlift:embed**
  - **Viidea**
