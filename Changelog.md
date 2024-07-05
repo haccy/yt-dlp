@@ -4,6 +4,15 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2024.07.05.111957
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/8279bcff1b87d912033cae7b308396493e3d93ea) by [pukkandan](https://github.com/pukkandan)
+- [Fix `--ignore-no-formats-error`](https://github.com/yt-dlp/yt-dlp/commit/cc767e9490056efaaa11c186b0d032e4b4969180) ([#10345](https://github.com/yt-dlp/yt-dlp/issues/10345)) by [Grub4K](https://github.com/Grub4K)
+
+#### Extractor changes
+- **douyutv**: [Do not use dangerous javascript source/URL](https://github.com/yt-dlp/yt-dlp/commit/6075a029dba70a89675ae1250e7cdfd91f0eba41) ([#10347](https://github.com/yt-dlp/yt-dlp/issues/10347)) by [LeSuisse](https://github.com/LeSuisse)
+
 ### 2024.07.02
 
 #### Core changes
