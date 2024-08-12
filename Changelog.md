@@ -4,6 +4,14 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2024.08.12.112207
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/909de163a7a2785af2e1dfd4f3749940dccb7a0a) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **youtube**: [Support excluding `player_client`s in extractor-arg](https://github.com/yt-dlp/yt-dlp/commit/49f3741a820ed142f6866317c2e7d247b130960e) ([#10710](https://github.com/yt-dlp/yt-dlp/issues/10710)) by [bashonly](https://github.com/bashonly)
+
 ### 2024.08.06
 
 #### Core changes
