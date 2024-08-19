@@ -4,6 +4,19 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2024.08.19.112038
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/9cb925f4fe19183084f0cf48060dd8c550ae0433) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **adn**: [Fix extractors](https://github.com/yt-dlp/yt-dlp/commit/cc88a54bb1ef285154775f8a6a413335ce4c71ce) ([#10749](https://github.com/yt-dlp/yt-dlp/issues/10749)) by [infanf](https://github.com/infanf)
+- **asobistage**: [Support redirected URLs](https://github.com/yt-dlp/yt-dlp/commit/a7d3235c84dac57a127cbe0ff38f7f7c2fdd8fa0) ([#10768](https://github.com/yt-dlp/yt-dlp/issues/10768)) by [pzhlkj6612](https://github.com/pzhlkj6612)
+- **bilibili**: [Fix festival URL support](https://github.com/yt-dlp/yt-dlp/commit/b43bd864851f2862e26caa85461c5d825d49d463) ([#10740](https://github.com/yt-dlp/yt-dlp/issues/10740)) by [bashonly](https://github.com/bashonly), [grqz](https://github.com/grqz)
+- **facebook**: ads: [Fix extractor](https://github.com/yt-dlp/yt-dlp/commit/d62fef7e07d454c0d2ba2d69fb96d691dba1ded0) ([#10704](https://github.com/yt-dlp/yt-dlp/issues/10704)) by [kclauhk](https://github.com/kclauhk)
+- **patreoncampaign**: [Support API URLs](https://github.com/yt-dlp/yt-dlp/commit/232e6db30c474d1b387e405342f34173ceeaf832) ([#10734](https://github.com/yt-dlp/yt-dlp/issues/10734)) by [bashonly](https://github.com/bashonly), [hibes](https://github.com/hibes)
+- **youtube**: [Support excluding `player_client`s in extractor-arg](https://github.com/yt-dlp/yt-dlp/commit/49f3741a820ed142f6866317c2e7d247b130960e) ([#10710](https://github.com/yt-dlp/yt-dlp/issues/10710)) by [bashonly](https://github.com/bashonly)
+
 ### 2024.08.06
 
 #### Core changes
