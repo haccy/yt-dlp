@@ -4,6 +4,14 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2024.10.01.112342
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/cd34fa3e8991c2912ede4fdceeba8719f43bca62) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **applepodcasts**: [Fix extractor](https://github.com/yt-dlp/yt-dlp/commit/6328e2e67a4e126e08af382e6a387073082d5c5f) ([#10903](https://github.com/yt-dlp/yt-dlp/issues/10903)) by [coreywright](https://github.com/coreywright)
+
 ### 2024.09.27
 
 #### Important changes
