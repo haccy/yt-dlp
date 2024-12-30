@@ -4,6 +4,14 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2024.12.30.112119
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/8bc07ea4bf2df35868e1c9f5b7507c8e758ef3f8) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **youtube**: [Fix DASH formats incorrectly skipped in some situations](https://github.com/yt-dlp/yt-dlp/commit/0b6b7742c2e7f2a1fcb0b54ef3dd484bab404b3f) ([#11910](https://github.com/yt-dlp/yt-dlp/issues/11910)) by [coletdjnz](https://github.com/coletdjnz)
+
 ### 2024.12.23
 
 #### Core changes
