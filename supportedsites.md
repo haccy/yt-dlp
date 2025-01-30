@@ -465,9 +465,9 @@
  - **fptplay**: fptplay.vn
  - **FranceCulture**
  - **FranceInter**
- - **FranceTV**
+ - **francetv**
+ - **francetv:site**
  - **francetvinfo.fr**
- - **FranceTVSite**
  - **Freesound**
  - **freespeech.org**
  - **freetv:series**
