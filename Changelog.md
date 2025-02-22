@@ -4,6 +4,20 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.02.22.111943
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/ceaa6a8ad1b2ec849e6dca424242323534ed854f) by [pukkandan](https://github.com/pukkandan)
+- [Support emitting ConEmu progress codes](https://github.com/yt-dlp/yt-dlp/commit/f7a1f2d8132967a62b0f6d5665c6d2dde2d42c09) ([#10649](https://github.com/yt-dlp/yt-dlp/issues/10649)) by [Grub4K](https://github.com/Grub4K)
+
+#### Extractor changes
+- **bunnycdn**: [Add extractor](https://github.com/yt-dlp/yt-dlp/commit/3a1583ca75fb523cbad0e5e174387ea7b477d175) ([#11586](https://github.com/yt-dlp/yt-dlp/issues/11586)) by [Grub4K](https://github.com/Grub4K), [seproDev](https://github.com/seproDev)
+- **niconico**: live: [Fix thumbnail extraction](https://github.com/yt-dlp/yt-dlp/commit/c2e6e1d5f77f3b720a6266f2869eb750d20e5dc1) ([#12419](https://github.com/yt-dlp/yt-dlp/issues/12419)) by [bashonly](https://github.com/bashonly)
+- **soundcloud**: [Extract tags](https://github.com/yt-dlp/yt-dlp/commit/9deed13d7cce6d3647379e50589c92de89227509) ([#12420](https://github.com/yt-dlp/yt-dlp/issues/12420)) by [bashonly](https://github.com/bashonly)
+
+#### Misc. changes
+- **test**: [Show all differences for `expect_value` and `expect_dict`](https://github.com/yt-dlp/yt-dlp/commit/a3e0c7d3b267abdf3933b709704a28d43bb46503) ([#12334](https://github.com/yt-dlp/yt-dlp/issues/12334)) by [Grub4K](https://github.com/Grub4K)
+
 ### 2025.02.19
 
 #### Core changes
