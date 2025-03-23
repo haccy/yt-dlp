@@ -4,6 +4,20 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.03.23.112233
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/d7d7d22ffbbb7de65e71eb1140b7332161bdf128) by [pukkandan](https://github.com/pukkandan)
+- [Fix attribute error on failed VT init](https://github.com/yt-dlp/yt-dlp/commit/b872ffec50fd50f790a5a490e006a369a28a3df3) ([#12696](https://github.com/yt-dlp/yt-dlp/issues/12696)) by [Grub4K](https://github.com/Grub4K)
+
+#### Extractor changes
+- **chzzk**: video: [Fix extraction](https://github.com/yt-dlp/yt-dlp/commit/e2dfccaf808b406d5bcb7dd04ae9ce420752dd6f) ([#12692](https://github.com/yt-dlp/yt-dlp/issues/12692)) by [bashonly](https://github.com/bashonly), [dirkf](https://github.com/dirkf)
+- **deezer**: [Remove extractors](https://github.com/yt-dlp/yt-dlp/commit/be5af3f9e91747768c2b41157851bfbe14c663f7) ([#12704](https://github.com/yt-dlp/yt-dlp/issues/12704)) by [seproDev](https://github.com/seproDev)
+- **viki**: [Remove extractors](https://github.com/yt-dlp/yt-dlp/commit/fe4f14b8369038e7c58f7de546d76de1ce3a91ce) ([#12703](https://github.com/yt-dlp/yt-dlp/issues/12703)) by [seproDev](https://github.com/seproDev)
+
+#### Networking changes
+- **Request Handler**: curl_cffi: [Support `curl_cffi` 0.10.x](https://github.com/yt-dlp/yt-dlp/commit/9bf23902ceb948b9685ce1dab575491571720fc6) ([#12670](https://github.com/yt-dlp/yt-dlp/issues/12670)) by [Grub4K](https://github.com/Grub4K)
+
 ### 2025.03.21
 
 #### Core changes
