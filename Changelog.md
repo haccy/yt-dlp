@@ -4,6 +4,14 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.03.29.112226
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/c276aa50d69175539f994ee387f4b4b2206a8c10) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **youtube**: tab: [Fix playlist continuation extraction](https://github.com/yt-dlp/yt-dlp/commit/6a6d97b2cbc78f818de05cc96edcdcfd52caa259) ([#12777](https://github.com/yt-dlp/yt-dlp/issues/12777)) by [coletdjnz](https://github.com/coletdjnz)
+
 ### 2025.03.27
 
 #### Core changes
