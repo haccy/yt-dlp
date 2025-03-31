@@ -4,6 +4,18 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.03.31.112415
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/234196d00d9ccd338f9a4109b48711f52cea14aa) by [pukkandan](https://github.com/pukkandan)
+- [Add `--compat-options 2024`](https://github.com/yt-dlp/yt-dlp/commit/22e34adbd741e1c7072015debd615dc3fb71c401) ([#12789](https://github.com/yt-dlp/yt-dlp/issues/12789)) by [seproDev](https://github.com/seproDev)
+
+#### Extractor changes
+- **generic**: [Validate response before checking m3u8 live status](https://github.com/yt-dlp/yt-dlp/commit/9a1ec1d36e172d252714cef712a6d091e0a0c4f2) ([#12784](https://github.com/yt-dlp/yt-dlp/issues/12784)) by [bashonly](https://github.com/bashonly)
+- **mlbtv**: [Fix radio-only extraction](https://github.com/yt-dlp/yt-dlp/commit/f033d86b96b36f8c5289dd7c3304f42d4d9f6ff4) ([#12792](https://github.com/yt-dlp/yt-dlp/issues/12792)) by [bashonly](https://github.com/bashonly)
+- **sbs**: [Fix subtitles extraction](https://github.com/yt-dlp/yt-dlp/commit/29560359120f28adaaac67c86fa8442eb72daa0d) ([#12785](https://github.com/yt-dlp/yt-dlp/issues/12785)) by [bashonly](https://github.com/bashonly)
+- **youtube**: tab: [Fix playlist continuation extraction](https://github.com/yt-dlp/yt-dlp/commit/6a6d97b2cbc78f818de05cc96edcdcfd52caa259) ([#12777](https://github.com/yt-dlp/yt-dlp/issues/12777)) by [coletdjnz](https://github.com/coletdjnz)
+
 ### 2025.03.27
 
 #### Core changes
