@@ -1227,6 +1227,7 @@ The only reliable way to check if a site is supported is to try it.
  - **RoosterTeeth**: [*roosterteeth*](## "netrc machine")
  - **RoosterTeethSeries**: [*roosterteeth*](## "netrc machine")
  - **RottenTomatoes**
+ - **RoyaLive**
  - **Rozhlas**
  - **RozhlasVltava**
  - **RTBF**: [*rtbf*](## "netrc machine") (**Currently broken**)
