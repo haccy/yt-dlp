@@ -4,6 +4,15 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.04.05.112145
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/ee1d4fbcde0123169828e4d56e74a0ccc608d694) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **royalive**: [Add extractor](https://github.com/yt-dlp/yt-dlp/commit/e1847535e28788414a25546a45bebcada2f34558) ([#12817](https://github.com/yt-dlp/yt-dlp/issues/12817)) by [CasperMcFadden95](https://github.com/CasperMcFadden95)
+- **vk**: [Fix chapters extraction](https://github.com/yt-dlp/yt-dlp/commit/5361a7c6e2933c919716e0cb1e3116c28c40419f) ([#12821](https://github.com/yt-dlp/yt-dlp/issues/12821)) by [seproDev](https://github.com/seproDev)
+
 ### 2025.03.31
 
 #### Core changes
