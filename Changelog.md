@@ -4,6 +4,18 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.04.06.112146
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/bbe3f3a04cdf2d5cee2478d92c64f684afefe570) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **crowdbunker**: [Make format extraction non-fatal](https://github.com/yt-dlp/yt-dlp/commit/4ebf41309d04a6e196944f1c0f5f0154cff0055a) ([#12836](https://github.com/yt-dlp/yt-dlp/issues/12836)) by [seproDev](https://github.com/seproDev)
+- **parti**: [Add extractors](https://github.com/yt-dlp/yt-dlp/commit/425017531fbc3369becb5a44013e26f26efabf45) ([#12769](https://github.com/yt-dlp/yt-dlp/issues/12769)) by [benfaerber](https://github.com/benfaerber)
+- **royalive**: [Add extractor](https://github.com/yt-dlp/yt-dlp/commit/e1847535e28788414a25546a45bebcada2f34558) ([#12817](https://github.com/yt-dlp/yt-dlp/issues/12817)) by [CasperMcFadden95](https://github.com/CasperMcFadden95)
+- **rumble**: [Improve format extraction](https://github.com/yt-dlp/yt-dlp/commit/58d0c83457b93b3c9a81eb6bc5a4c65f25e949df) ([#12838](https://github.com/yt-dlp/yt-dlp/issues/12838)) by [seproDev](https://github.com/seproDev)
+- **vk**: [Fix chapters extraction](https://github.com/yt-dlp/yt-dlp/commit/5361a7c6e2933c919716e0cb1e3116c28c40419f) ([#12821](https://github.com/yt-dlp/yt-dlp/issues/12821)) by [seproDev](https://github.com/seproDev)
+
 ### 2025.03.31
 
 #### Core changes
