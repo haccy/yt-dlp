@@ -4,6 +4,14 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.05.04.112236
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/5bcac985de3a407fb4820206b2a01d4ce68b1180) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **weverse**: [Fix live extraction](https://github.com/yt-dlp/yt-dlp/commit/5328eda8820cc5f21dcf917684d23fbdca41831d) ([#13084](https://github.com/yt-dlp/yt-dlp/issues/13084)) by [bashonly](https://github.com/bashonly)
+
 ### 2025.04.30
 
 #### Important changes
