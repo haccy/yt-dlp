@@ -4,6 +4,22 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.07.24.112830
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/c5fafabde7b90f2d8c92796a5ae1fc527c6fd367) by [pukkandan](https://github.com/pukkandan)
+- **utils**
+    - [Add `WINDOWS_VT_MODE` to globals](https://github.com/yt-dlp/yt-dlp/commit/eed94c7306d4ecdba53ad8783b1463a9af5c97f1) ([#12460](https://github.com/yt-dlp/yt-dlp/issues/12460)) by [Grub4K](https://github.com/Grub4K)
+    - `random_user_agent`: [Bump versions](https://github.com/yt-dlp/yt-dlp/commit/c59ad2b066bbccd3cc4eed580842f961bce7dd4a) ([#13543](https://github.com/yt-dlp/yt-dlp/issues/13543)) by [bashonly](https://github.com/bashonly)
+
+#### Extractor changes
+- **sproutvideo**: [Fix extractor](https://github.com/yt-dlp/yt-dlp/commit/59765ecbc08d18005de7143fbb1d1caf90239471) ([#13813](https://github.com/yt-dlp/yt-dlp/issues/13813)) by [bashonly](https://github.com/bashonly)
+- **vimeo**: [Fix login support and require authentication](https://github.com/yt-dlp/yt-dlp/commit/afaf60d9fd5a0c7a85aeb1374fd97fbc13cd652c) ([#13823](https://github.com/yt-dlp/yt-dlp/issues/13823)) by [bashonly](https://github.com/bashonly)
+
+#### Postprocessor changes
+- **embedthumbnail**: [Fix ffmpeg args for embedding in mp3](https://github.com/yt-dlp/yt-dlp/commit/7e3f48d64d237281a97b3df1a61980c78a0302fe) ([#13720](https://github.com/yt-dlp/yt-dlp/issues/13720)) by [atsushi2965](https://github.com/atsushi2965)
+- **xattrmetadata**: [Add macOS "Where from" attribute](https://github.com/yt-dlp/yt-dlp/commit/3e918d825d7ff367812658957b281b8cda8f9ebb) ([#12664](https://github.com/yt-dlp/yt-dlp/issues/12664)) by [rolandcrosby](https://github.com/rolandcrosby)
+
 ### 2025.07.21
 
 #### Important changes
