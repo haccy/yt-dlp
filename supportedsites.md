@@ -447,6 +447,7 @@ The only reliable way to check if a site is supported is to try it.
  - **fancode:live**: [*fancode*](## "netrc machine") (**Currently broken**)
  - **fancode:vod**: [*fancode*](## "netrc machine") (**Currently broken**)
  - **Fathom**
+ - **FaulioLive**
  - **faz.net**
  - **fc2**: [*fc2*](## "netrc machine")
  - **fc2:embed**
@@ -1056,7 +1057,7 @@ The only reliable way to check if a site is supported is to try it.
  - **ParamountPressExpress**
  - **Parler**: Posts on parler.com
  - **parliamentlive.tv**: UK parliament videos
- - **Parlview**: (**Currently broken**)
+ - **Parlview**
  - **parti:livestream**
  - **parti:video**
  - **patreon**
@@ -1105,6 +1106,7 @@ The only reliable way to check if a site is supported is to try it.
  - **pluralsight:course**
  - **PlutoTV**: (**Currently broken**)
  - **PlVideo**: Платформа
+ - **PlyrEmbed**
  - **PodbayFM**
  - **PodbayFMChannel**
  - **Podchaser**
@@ -1524,7 +1526,6 @@ The only reliable way to check if a site is supported is to try it.
  - **TrueID**
  - **TruNews**
  - **Truth**
- - **TruTV**
  - **Tube8**: (**Currently broken**)
  - **TubeTuGraz**: [*tubetugraz*](## "netrc machine") tube.tugraz.at
  - **TubeTuGrazSeries**: [*tubetugraz*](## "netrc machine")
