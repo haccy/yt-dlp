@@ -4,6 +4,24 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.10.23.112513
+
+#### Important changes
+- **The minimum *required* Python version has been raised to 3.10**
+Python 3.9 has reached its end-of-life as of October 2025, and yt-dlp has now removed support for it. [Read more](https://github.com/yt-dlp/yt-dlp/issues/13858)
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/a819d589de16a34a69335c08791b776929e71f84) by [pukkandan](https://github.com/pukkandan)
+- [Remove Python 3.9 support](https://github.com/yt-dlp/yt-dlp/commit/4e6a693057cfaf1ce1f07b019ed3bfce2bf936f6) ([#13861](https://github.com/yt-dlp/yt-dlp/issues/13861)) by [bashonly](https://github.com/bashonly)
+
+#### Extractor changes
+- **appleconnect**: [Rework extractor](https://github.com/yt-dlp/yt-dlp/commit/78748b506f0dca8236ac0045ed7f72f7cf334b62) ([#13229](https://github.com/yt-dlp/yt-dlp/issues/13229)) by [doe1080](https://github.com/doe1080)
+- **tvnoe**: [Rework Extractor](https://github.com/yt-dlp/yt-dlp/commit/fe5ae54a7b08ebe679f03afdeafbe1cee5784d5b) ([#13369](https://github.com/yt-dlp/yt-dlp/issues/13369)) by [doe1080](https://github.com/doe1080)
+
+#### Misc. changes
+- **cleanup**: Miscellaneous: [c7bda21](https://github.com/yt-dlp/yt-dlp/commit/c7bda2192aa24afce40fdbbbe056d269aa3b2872) by [bashonly](https://github.com/bashonly), [seproDev](https://github.com/seproDev)
+- **docs**: [Update list of maintainers](https://github.com/yt-dlp/yt-dlp/commit/dfc0a84c192a7357dd1768cc345d590253a14fe5) ([#14148](https://github.com/yt-dlp/yt-dlp/issues/14148)) by [bashonly](https://github.com/bashonly), [coletdjnz](https://github.com/coletdjnz), [seproDev](https://github.com/seproDev)
+
 ### 2025.10.14
 
 #### Core changes
