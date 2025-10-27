@@ -4,6 +4,19 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.10.27.112517
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/c522e66fd96371c0e645dffd981e8a3e92c31500) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **googledrive**: [Rework extractor](https://github.com/yt-dlp/yt-dlp/commit/70f1098312fe53bc85358f7bd624370878b2fa28) ([#14746](https://github.com/yt-dlp/yt-dlp/issues/14746)) by [seproDev](https://github.com/seproDev)
+- **urplay**: [Fix extractor](https://github.com/yt-dlp/yt-dlp/commit/808b1fed76fbd07840cc23a346c11334e3d34f43) ([#14785](https://github.com/yt-dlp/yt-dlp/issues/14785)) by [seproDev](https://github.com/seproDev)
+- **web.archive**: youtube: [Fix extractor](https://github.com/yt-dlp/yt-dlp/commit/d9e3011fd1c3a75871a50e78533afe78ad427ce3) ([#14753](https://github.com/yt-dlp/yt-dlp/issues/14753)) by [seproDev](https://github.com/seproDev)
+
+#### Misc. changes
+- **devscripts**: [Improve `install_deps` script](https://github.com/yt-dlp/yt-dlp/commit/73922e66e437fb4bb618bdc119a96375081bf508) ([#14766](https://github.com/yt-dlp/yt-dlp/issues/14766)) by [bashonly](https://github.com/bashonly)
+
 ### 2025.10.22
 
 #### Important changes
