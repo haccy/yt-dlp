@@ -4,6 +4,14 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2025.12.10.112828
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/c8e307c28ce2ffcccd11a2ebb47518aa70553769) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **archive.org**: [Fix metadata extraction](https://github.com/yt-dlp/yt-dlp/commit/5f37f67d37b54bf9bd6fe7fa3083492d42f7a20a) ([#15286](https://github.com/yt-dlp/yt-dlp/issues/15286)) by [bashonly](https://github.com/bashonly)
+
 ### 2025.12.08
 
 #### Core changes
