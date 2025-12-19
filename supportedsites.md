@@ -89,7 +89,6 @@ The only reliable way to check if a site is supported is to try it.
  - **APA**
  - **Aparat**
  - **apple:​music:connect**: Apple Music Connect
- - **AppleDaily**: 臺灣蘋果日報
  - **ApplePodcasts**
  - **appletrailers**
  - **appletrailers:section**
@@ -448,6 +447,7 @@ The only reliable way to check if a site is supported is to try it.
  - **fc2:live**
  - **Fczenit**
  - **Fifa**
+ - **FilmArchiv**: FILMARCHIV ON
  - **filmon**
  - **filmon:channel**
  - **Filmweb**
@@ -914,15 +914,12 @@ The only reliable way to check if a site is supported is to try it.
  - **Netverse**
  - **NetversePlaylist**
  - **NetverseSearch**: "netsearch:" prefix
- - **Netzkino**: (**Currently broken**)
+ - **Netzkino**
  - **Newgrounds**: [*newgrounds*](## "netrc machine")
  - **Newgrounds:playlist**
  - **Newgrounds:user**
  - **NewsPicks**
  - **Newsy**
- - **NextMedia**: 蘋果日報
- - **NextMediaActionNews**: 蘋果日報 - 動新聞
- - **NextTV**: 壹電視 (**Currently broken**)
  - **Nexx**
  - **NexxEmbed**
  - **nfb**: nfb.ca and onf.ca films and episodes
