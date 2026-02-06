@@ -734,6 +734,8 @@ The only reliable way to check if a site is supported is to try it.
  - **Livestreamfails**
  - **Lnk**
  - **loc**: Library of Congress
+ - **Locipo**
+ - **LocipoPlaylist**
  - **Loco**
  - **loom**
  - **loom:folder**: (**Currently broken**)
@@ -1664,6 +1666,7 @@ The only reliable way to check if a site is supported is to try it.
  - **ViMP:Playlist**
  - **Viously**
  - **Viqeo**: (**Currently broken**)
+ - **Visir**: Vísir
  - **Viu**
  - **viu:ott**: [*viu*](## "netrc machine")
  - **viu:playlist**
