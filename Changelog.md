@@ -4,6 +4,21 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2026.03.12.114057
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/ce33b7df4b56503cfdc8b6679c801756af3c54ad) by [pukkandan](https://github.com/pukkandan)
+
+#### Extractor changes
+- **youtube**
+    - [Fix `android_vr` player client](https://github.com/yt-dlp/yt-dlp/commit/ff459e5fc04b1a061212672626b7bfa23ff3cdcd) ([#16168](https://github.com/yt-dlp/yt-dlp/issues/16168)) by [gamer191](https://github.com/gamer191)
+    - [Fix `use_ad_playback_context` extractor-arg](https://github.com/yt-dlp/yt-dlp/commit/7e145ac1cae8f891e18c9375fa23097f1dfa0b19) ([#16196](https://github.com/yt-dlp/yt-dlp/issues/16196)) by [bashonly](https://github.com/bashonly)
+    - [Fix `web_embedded` player client](https://github.com/yt-dlp/yt-dlp/commit/f2bd3202c0ffa3f0c0069c44ca53b625dca568bc) ([#16177](https://github.com/yt-dlp/yt-dlp/issues/16177)) by [bashonly](https://github.com/bashonly), [SparseOrnament15](https://github.com/SparseOrnament15)
+    - [Request `web_safari` & `web_creator` client configs](https://github.com/yt-dlp/yt-dlp/commit/48a61d0f38b156785d24df628d42892441e008c4) ([#16198](https://github.com/yt-dlp/yt-dlp/issues/16198)) by [bashonly](https://github.com/bashonly)
+    - tab
+        - [Fix album extraction](https://github.com/yt-dlp/yt-dlp/commit/ae025da02364f4d085953f41fd0d32ade3c4afb9) ([#16041](https://github.com/yt-dlp/yt-dlp/issues/16041)) by [FriederHannenheim](https://github.com/FriederHannenheim)
+        - [Improve description extraction](https://github.com/yt-dlp/yt-dlp/commit/3e36cf9cdb12ef566416c5620a1a95b5a0221017) ([#16057](https://github.com/yt-dlp/yt-dlp/issues/16057)) by [Peter-Devine](https://github.com/Peter-Devine)
+
 ### 2026.03.03
 
 #### Extractor changes
