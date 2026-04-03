@@ -4,6 +4,20 @@
 # To create a release, dispatch the https://github.com/yt-dlp/yt-dlp/actions/workflows/release.yml workflow on master
 -->
 
+### 2026.04.03.115007
+
+#### Core changes
+- [.](https://github.com/yt-dlp/yt-dlp/commit/f7570d877cdaedeb8c7037e98b96cf1c49e67fb6) by [pukkandan](https://github.com/pukkandan)
+- [Fix `default` extra for `ios` platforms](https://github.com/yt-dlp/yt-dlp/commit/a5aae189452d11ca731a4fb409d0136c668bd7c6) ([#16376](https://github.com/yt-dlp/yt-dlp/issues/16376)) by [bashonly](https://github.com/bashonly)
+
+#### Extractor changes
+- **bandcamp**: weekly: [Fix extractor](https://github.com/yt-dlp/yt-dlp/commit/2d7b278666bfbf12cf287072498dd275c946b968) ([#16373](https://github.com/yt-dlp/yt-dlp/issues/16373)) by [bashonly](https://github.com/bashonly)
+- **rtp**: [Support multi-part episodes and `--no-playlist`](https://github.com/yt-dlp/yt-dlp/commit/f01e1a1ced581c13f28c7da45eb6396cb9fff6e4) ([#16299](https://github.com/yt-dlp/yt-dlp/issues/16299)) by [bashonly](https://github.com/bashonly)
+
+#### Misc. changes
+- **build**: [Harden build/release workflows](https://github.com/yt-dlp/yt-dlp/commit/87eaf886f5a1fed00639baf3677ac76281cd98f9) ([#16358](https://github.com/yt-dlp/yt-dlp/issues/16358)) by [bashonly](https://github.com/bashonly), [Grub4K](https://github.com/Grub4K) (With fixes in [cdc465a](https://github.com/yt-dlp/yt-dlp/commit/cdc465a34674d15edf52b656457f6006b9e03edf) by [bashonly](https://github.com/bashonly))
+- **devscripts**: [Handle `ejs` updates for requirements files](https://github.com/yt-dlp/yt-dlp/commit/fcccbc68496d8af1b7c24cd5e45e83af4ca76f18) ([#16374](https://github.com/yt-dlp/yt-dlp/issues/16374)) by [bashonly](https://github.com/bashonly), [Grub4K](https://github.com/Grub4K)
+
 ### 2026.03.17
 
 #### Extractor changes
